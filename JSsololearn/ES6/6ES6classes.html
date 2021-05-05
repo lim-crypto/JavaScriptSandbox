@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+class Rectangle{
+    constructor(height,width){
+        this.height=height;
+        this.width=width;
+    }
+    get area(){
+        return this.calcArea();
+    }
+    calcArea(){
+        return this.height*this.width;
+    }
+}
+const square=new Rectangle(5,5);
+console.log('height:'+square.height);
+console.log('Area:'+square.area);
+
+
+class Point{
+    constructor(x,y){
+        this.x=x;
+        this.y=y;
+    }
+    static distance(a,b){
+        const dx=a.x-b.x;
+        const dy=a.y-b.y;
+        return Math.hypot(dx,dy);
+    }
+}
+const p1=new Point(7,2);
+const p2=new Point(2,8);
+console.log(Point.distance(p1,p2));
+
+
+class Animal{
+    constructor(name){
+        this.name=name;
+    }
+    speak(){
+        console.log(this.name+'makes a noise');
+    }
+}
+class Dog extends Animal{
+    speak(){
+        super.speak();
+        console.log(this.name+'barks');
+    }
+}
+let dog = new Dog('Rex');
+dog.speak();
+// let Animals=new Animal('dog');
+// Animals.speak();
+</script>
+</body>
+</html>

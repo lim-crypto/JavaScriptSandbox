@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo{
+            cursor: pointer;
+            border: 1px solid black;
+        
+        }
+    </style>
+</head>
+<body onload="doSomething()" >
+    <input type="text" id="name" placeholder="onchange" onchange="change()" ><br>
+    <button onclick="show();" >alert</button>
+    <div id="demo">date  (click) </div>
+    <div id="demo2">click</div>
+<script>
+ 
+function change(){
+var x= document.getElementById('name');
+x.value=x.value.toUpperCase();
+}
+
+function show(){
+   alert ('hi');
+}
+
+var x = document.getElementById('demo');
+x.onclick= function(){
+    // document.body.innerHTML=Date();
+    //  x.innerText=Date();
+    x.innerHTML=Date(); 
+}
+// x.onmouseout= function(){
+//     // document.body.innerHTML=Date();
+//     //  x.innerText=Date();
+//     x.innerHTML='date  (click)'; 
+// }
+var btn=document.getElementById('demo2');
+btn.addEventListener("click",myFunction);
+// btn.addEventListener("mouseout",myFunction);
+// btn.addEventListener("mouseover",myFunction);
+function myFunction(){
+    // alert(Math.random());
+    // btn.removeEventListener("click",myFunction)
+    btn.style.backgroundColor="red";
+    btn.style.fontSize="30px";
+    btn.innerText="hello";
+    // btn.style.width="100px"
+}
+    </script>
+</body>
+</html>

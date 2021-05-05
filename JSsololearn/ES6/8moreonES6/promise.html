@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// setTimeout(function(){
+//     console.log("work");
+//     setTimeout(function(){
+//         console.log("work2");
+//     },1000);
+// },1000);
+// console.log('end');
+
+
+// new Promise(function(resolve,reject){
+//     if(success){
+//         resolve(result);
+//     }else{
+//         reject(Error('failure'));
+//     }
+// });
+
+function asyncFunc(work){
+    return new Promise(function(resolve,reject){
+        if(work === ""){
+            reject(Error("Nothing"));
+        }
+        setTimeout(function(){
+            resolve(work)
+            },1000);
+        
+    });
+}
+
+asyncFunc("work 1 ")
+.then(function(result){
+    console.log(result);
+    return asyncFunc("work 2 ");
+}, function(error){
+    console.log(error);
+})
+.then(function(result){
+    console.log(result);
+}, function(error){
+    console.log(error);
+});
+// console.log("end");
+
+
+</script>
+</body>
+</html>

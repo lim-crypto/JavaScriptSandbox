@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="id">
+        <a href=""></a>
+        <a href=""></a>
+    </div>
+    <div class="classname"></div>
+    <div class="classname"></div>
+<div id="demo">
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+</div>
+<script>
+    //select element
+    document.getElementById('id').innerHTML='this Is ID';
+    // var classname = document.querySelectorAll('.classname');
+    // console.log(classname)
+    var classname = document.getElementsByClassName('classname');
+    for ( let y=0; y<classname.length;y++){
+        classname[y].innerHTML='this is class';
+    }
+    var a =  document.getElementsByTagName('p');
+    for(var x=0; x<a.length; x++){
+        a[x].innerHTML='this is tagname';
+    }
+    var demo=document.getElementById('demo');
+    var arr= demo.childNodes;
+    for(let x=0;x<arr.length;x++){
+        arr[x].innerHTML='new text tagname';
+    }
+    // demo.firstElementChild.innerHTML="1st child";
+    // demo.firstChild.textContent="1st child";
+    demo.firstElementChild.textContent="1st child";
+    demo.lastChild.textContent="last child";
+</script>
+</body>
+</html>

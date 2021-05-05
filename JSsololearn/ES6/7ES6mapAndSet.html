@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let map = new Map();
+//set(key,value) get(key) has(key) delete(key) 
+//clear() keys() values() entries()
+map.set('k1','v1').set('k2','v2');
+console.log(map.size);
+console.log(map.get('k1'));
+console.log(map.has('k2'));
+for(let kv of map.entries()){
+    console.log(kv[0] +':'+kv[1] )
+}
+
+
+
+
+
+
+let set = new Set ([1,2,4,2,59,4,9,1]);
+console.log(set);
+console.log(set.size);
+// add(3) delete(5) has(3) clear() values()
+set.clear()
+set.add(5).add(9).add(3);
+set.delete(5)
+console.log(set.has(3));
+for (let v of set.values()){
+    console.log(v)
+}
+
+</script>
+</body>
+</html>

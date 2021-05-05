@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    //REST PARAMETER
+function con(arr){
+    for(let k=1;k<arguments.length;k++){
+        let num=arguments[k];
+        if(arr.indexOf(num)===-1){
+            return false;
+        }
+    }
+    return true;
+}
+let x=[2,4,6,7];
+console.log(con(x,6,4,7));
+//ES6
+function con(arr,...nums){
+    for(let num of nums){
+        if(arr.indexOf(num)===-1){
+            return false;
+        }
+    }
+    return true;
+}
+let y=[2,4,6,7];
+console.log(con(y,6,4,9));
+
+// function con(arr){
+//     for(let k=0;k<arguments.length;k++){
+//         let num=arguments[k];
+//         console.log(num);
+//     }
+//     return true;
+// }
+// console.log(con(6,4,9));
+
+
+//SPREAD OPERATOR
+
+// function myFunction(w,x,y,z){
+//     console.log(w+x+y+z);
+// }
+// var args=[1,2,3];
+// myFunction.apply(null,args.concat(4));
+
+//ES6
+const myFunction = (w,x,y,z)=>{
+    console.log(w+x+y+z);
+}
+let args=[1,2,3];
+myFunction(...args,4);
+
+var dateFields = [1970,0,1];
+var date = new Date(...dateFields);
+console.log(date);
+
+
+// var arr=["One","two","five"];
+// arr.splice(2,0,'three');
+// arr.splice(3,0,'four');
+// console.log(arr);
+
+//ES6
+let newArr=["three","four"];
+let arr=["one","two",...newArr,"five"];
+console.log(arr);
+
+
+const obj1={foo:'bar',x:42};
+const obj2={foo:'baz',y:5};
+const cloneObj={...obj1};
+const mergedObj={...obj1,...obj2};
+console.log(mergedObj);
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+        var height=10;
+     let tree={
+         height,
+         color:'green',
+         grow(){
+             this.height+=2;
+         }
+     }
+     console.log(tree.height);//10
+     tree.grow();
+     console.log(tree.height);//12
+
+
+     let prop = 'namee';
+     let id='1234';
+     let mobile='0987';
+
+     let user={
+         [prop]:'jack',
+         [`user_${id}`]:`${mobile}`
+     };
+     console.log(user);
+    var param ='size';
+    var config={
+    [param]:12,
+    ['mobile'+param.charAt(0).toUpperCase()+
+    param.slice(1)]:4
+};
+console.log(config)
+
+let person ={
+    name:'jack',
+    age:18,
+    sex:'male'
+};
+let student={
+    name:'bob',
+    age:20,
+    xp:2
+};
+
+let newStudent= Object.assign({},person,student);
+console.log(newStudent)
+
+// let newP = person; 
+let newP = Object.assign({},person);
+
+newP.name = 'newp';
+console.log(person.name);
+console.log(newP.name); 
+
+let newPerson= Object.assign({},person,{name:'wow'});
+console.log(newPerson)
+
+</script>
+</body>
+</html>

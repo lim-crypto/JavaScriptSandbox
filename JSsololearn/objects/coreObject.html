@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+
+// var arr=new Array();
+// arr[0]="html";
+// arr[1]="css";
+// document.write(arr.length+"<br>")
+// for ( var x=0 ; x<arr.length ;x++){ 
+// document.write(arr[x]+"<br>"); 
+// }
+
+
+var arr = ['html', 'css','javascript'];
+var arr2=['php', 'sql'];
+arr2['pl']="python";
+// document.write(arr2[2]); // undefined
+// document.write(arr2['pl']); 
+var newArr=arr.concat(arr2);
+document.write(newArr);
+// document.write(arr.length);
+document.write(
+'<br> pi '+ Math.PI+
+'<br> e '+Math.E+
+'<br> square root '+Math.sqrt(4)+
+'<br>random '+ Math.ceil(Math.random()*10)+
+'<br>random '+ Math.random()+'<br>');
+
+
+// function myA(){
+//     alert("hi");
+// }
+// setInterval(myA,1000);
+
+function printTime(){
+    
+var d= new Date(); 
+var h = d.getHours();
+var m = d.getMinutes();
+var s = d.getSeconds();
+var ms =d.getMilliseconds();
+// document.write(d.getHours()+' '+d.getMinutes()+' '+
+// d.getSeconds()+' '+d.getMilliseconds()+"<br>")
+document.querySelector('.time').innerHTML=
+'Time : '+h+':'+m+':'+s+':'+ms;
+
+}
+setInterval(printTime,1)
+// delay 4ms 2ms 1ms
+    </script>
+<div class="time"></div>
+</body>
+</html>

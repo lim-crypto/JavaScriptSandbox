@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         var person = {
+//             name: "john",
+//             age: 12,
+//             favColor:"green",
+//             height:23
+//         };
+//         var x = person.age;
+//         var y = person['age'];
+//         console.log(x); //12
+//         console.log(y); //12
+// document.write(person.name.length); //4
+function person(name, age,color){
+    this.name=name;
+    this.age=age;
+    this.color=color;
+    this.changeName= function (name){
+        this.name=name;
+    }
+
+    this.yearOfBirth=bornYear;
+}
+function bornYear(){
+    return 2020 - this.age;
+}
+var p1= new person("john", 42, 'green');
+var p2= new person("jane",  20,'blue');
+p1.changeName('changed');
+        document.write(p1.name);
+        document.write(p2.name);
+        document.write('<br>');
+        document.write(p2.yearOfBirth())
+    </script>
+</body>
+</html>

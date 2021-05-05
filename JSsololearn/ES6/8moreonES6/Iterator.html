@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// let myIterator={
+//     [Symbol.iterator]:function* (){
+//         yield 1; yield 2; yield 3;
+//     }
+// }
+// console.log([...myIterator]);
+
+function* idMaker(){
+    let index=3;
+    while (index<5)
+    yield index++;
+
+}
+var gen = idMaker();
+console.log(gen.next().value);
+</script>
+</body> 
+</html>

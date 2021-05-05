@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "name":"jerald Lim",
+        "company":"WI7 industry",
+        "phone": 874100410
+    },
+    {
+        "id":2,
+        "name":"john doe",
+        "company":"WI7 industry",
+        "phone": 123123
+    },
+    {
+        "id":1,
+        "name":"jane doe",
+        "company":"WI7 industry",
+        "phone": 3123123123
+    }
+]

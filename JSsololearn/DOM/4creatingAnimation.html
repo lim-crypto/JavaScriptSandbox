@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #con{
+            background-color:green;
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+        #box{
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+        #box2{
+            background-color: blue;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top:50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="con"> 
+
+        <div id="box">   </div>
+        <div id=box2 ></div>
+    </div>
+
+    <script>
+var pos=0;
+var pos2=150
+var box=document.getElementById('box');
+var t=setInterval(move,10); 
+
+
+function move(){
+     
+    if(pos>=pos2){
+        if(pos2<=0){
+            pos=pos2;
+            pos2=150;
+            move();
+        }else{
+        pos2--;
+        box.style.left=pos2+"px"; 
+        }
+
+    }else{
+    pos++;
+    box.style.left=pos+"px"; 
+    }
+ 
+}
+
+
+
+
+var pos3=0;
+var pos4=150;
+var box2=document.getElementById('box2');
+var t=setInterval(move2,10); 
+function move2(){
+    if(pos>=pos2){
+        if(pos2<=0){
+            pos=pos2;
+            pos2=150;
+            move2();
+        }else{
+        pos2--;
+        box2.style.left=pos2+"px"; 
+        }
+
+    }else{
+    pos++;
+    box2.style.left=pos+"px"; 
+    }
+ 
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    let arr=[11, 22, 33];
+    for(let k=0; k<arr.length;k++){
+        console.log(arr[k])
+                    // value
+    }
+    for( let i in arr){
+        console.log(i+' '+ arr[i] )
+                //index   // value
+    }
+    for( let i of arr){
+        console.log(i+' '+ arr[i] )//no index[i]
+                    //value
+    }
+
+    let arr2={a:1, b:2, c:3};
+    for( let v in arr2 ){
+        console.log(v+' '+ arr2[v] );
+    }
+    for( let v of arr2 ){   //error
+        console.log(v);
+    }
+  
+
+</script>
+
+</body>
+</html>
